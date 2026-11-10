@@ -3,85 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Local AI Under Human Control · GLAF Research Agenda</title>
-  <meta name="description" content="Ten proposed research questions about community compute and keeping critical operations under human control.">
-  <link rel="canonical" href="https://globallocalai.org/research-agenda.html">
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <style>
-    :root{color-scheme:light dark;--bg:#faf8f4;--ink:#17232a;--muted:#414c50;--accent:#11683e;--line:#cdd6cb;--panel:#eff5ed}
-    @media(prefers-color-scheme:dark){:root{--bg:#0c0d0e;--ink:#f6f3ec;--muted:#c4ccc6;--accent:#83daa8;--line:#43524a;--panel:#18241d}}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,sans-serif}
-    .wrap{width:min(100% - 2.5rem,58rem);margin-inline:auto}
-    header,footer{padding:1.2rem 0;border-block:1px solid var(--line)}
-    nav,.links{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1.4rem}
-    a{color:var(--accent);text-underline-offset:.2em}
-    a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-    h1,h2,h3{line-height:1.18}
-    h1{font-size:clamp(2.5rem,7vw,4.7rem);letter-spacing:-.05em;margin:.35em 0}
-    h2{font-size:clamp(1.6rem,4vw,2.35rem);letter-spacing:-.025em;margin:.25em 0}
-    h3{font-size:1.14rem;margin:0 0 .4rem}
-    p{margin:.5rem 0 1rem;color:var(--muted)}
-    section{padding:2.3rem 0;border-bottom:1px solid var(--line)}
-    .intro{padding-top:clamp(2.5rem,8vw,5rem)}
-    .lead{font-size:1.16rem;max-width:43rem}
-    .label{color:var(--accent);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .questions{padding-left:1.7rem;margin:1.5rem 0 0}
-    .questions li{padding:.8rem 0 .45rem .3rem;border-top:1px solid var(--line)}
-    .questions li::marker{font-weight:700;color:var(--accent)}
-    .questions p{margin-bottom:.7rem}
-    .evidence{margin-top:1.35rem;padding:1rem 1.2rem;background:var(--panel);border:1px solid var(--line);border-radius:.45rem}
-    .evidence p{margin:0}
-  </style>
+  <title>Local AI Under Human Control · GLAF</title>
+  <link rel="canonical" href="https://globallocalai.org/#/research-agenda">
+  <meta http-equiv="refresh" content="0; url=./#/research-agenda">
 </head>
 <body>
-  <header>
-    <nav class="wrap" aria-label="Research agenda navigation">
-      <a href="./"><strong>GLAF</strong></a>
-      <a href="./#/library">Research library</a>
-      <a href="https://glammovement.org/#glamifesto">GLAMifesto</a>
-    </nav>
-  </header>
-  <main class="wrap">
-    <section class="intro" aria-labelledby="agenda-title">
-      <p class="label">Proposed research agenda</p>
-      <h1 id="agenda-title">Local AI Under Human Control</h1>
-      <p class="lead">How can communities share local AI affordably, and how can operators isolate an AI system while keeping an essential service running safely?</p>
-      <p>These ten questions grow out of the GLAMifesto. The research library provides background. Below we distinguish existing evidence from tests we propose and the results that would change our approach.</p>
-      <div class="links"><a href="#community-compute">Community Compute</a><a href="#critical-operations">Critical Operations</a><a href="#contact">Discuss the agenda</a></div>
-    </section>
-    <section id="community-compute" aria-labelledby="community-title">
-      <p class="label">Research track</p>
-      <h2 id="community-title">Community Compute</h2>
-      <p>Study the cost, access rules, privacy and practical limits of shared local and hybrid AI.</p>
-      <div class="evidence"><p><strong>Existing evidence.</strong> Berkeley Lab documents data-center energy and water use. The Virginia legislative audit examines siting, noise and employment. These provide comparison points for community-scale measurements. <a href="https://bies.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report">Berkeley Lab report</a> · <a href="https://jlarc.virginia.gov/landing-2024-data-centers-in-virginia.asp">Virginia legislative audit</a></p></div>
-      <ol class="questions">
-        <li><h3>What does shared local compute cost in power, water and space?</h3><p>Compare comparable workloads across local and cloud configurations, including idle power and cooling. A local setup that draws more resources for the same accepted work would weaken the case for that workload.</p></li>
-        <li><h3>Can a shared node operate without disturbing neighbors?</h3><p>Measure normal and peak noise in occupied spaces, including at night. If an agreed limit is exceeded, change the equipment, placement or hours before proposing a pilot.</p></li>
-        <li><h3>Which operating and training work actually stays local?</h3><p>Track paid maintenance, support and training hours. If work mainly accrues to outside vendors, revisit staffing and handover.</p></li>
-        <li><h3>Which everyday tasks can smaller models handle?</h3><p>Compare task acceptance, retries and energy across local and cloud options. Shift the routing boundary when a model misses an agreed quality threshold.</p></li>
-        <li><h3>What can leak from a local or hybrid deployment?</h3><p>Use synthetic records to check outbound traffic, access between users and deletion. Evidence of leakage would change defaults for logging, storage or routing.</p></li>
-        <li value="7"><h3>Can people enforce the rules they set for their knowledge?</h3><p>With willing rights holders, test retrieval, reuse, export and withdrawal using material they authorize. A failed permission or withdrawal test would block wider use of that material.</p></li>
-        <li><h3>Which hardware and access rules make a shared node affordable and usable?</h3><p>Compare cost per user, queue time and accessibility across configurations. If some groups face consistently worse access, revisit allocation rules and support.</p></li>
-        <li><h3>When does reusing a checked public answer help?</h3><p>Compare exact matches, semantic matches and retrieval of source documents. Count stale answers and avoided cloud calls. Tighten reuse rules if error or staleness exceeds the agreed limit.</p></li>
-        <li><h3>Can another community reproduce the results?</h3><p>Share permitted test inputs, settings and results. If the outcome depends on one site or device, document that boundary and test again.</p></li>
-      </ol>
-    </section>
-    <section id="critical-operations" aria-labelledby="critical-title">
-      <p class="label">Research track</p>
-      <h2 id="critical-title">Critical Operations</h2>
-      <p>Study whether a human operator can isolate an AI system while an essential service remains safe and under independent control.</p>
-      <div class="evidence"><p><strong>Existing evidence.</strong> NIST documents the safety and availability requirements of operational technology. Joint guidance for infrastructure operators calls for practicing isolation of vital systems while maintaining service. <a href="https://csrc.nist.gov/pubs/sp/800/82/r3/final">NIST operational technology guide</a> · <a href="https://www.cyber.gov.au/publication/ci-fortify-advice-for-isolating-vital-systems">CI Fortify isolation guidance</a></p></div>
-      <ol class="questions" start="6">
-        <li><h3>Can an operator isolate an AI system and keep the service running safely?</h3><p>Begin with synthetic pump telemetry and an isolated simulation. Test a cutoff outside the AI host. Observe whether test commands stop at the boundary and whether the simulated service stays in its safe range under independent human control.</p><p>Any command that crosses after cutoff, any unsafe state, or any failed manual recovery would change the design. Record what was tested and the limits of the result.</p></li>
-      </ol>
-    </section>
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Help us improve the tests</h2>
-      <p>We welcome conversations with researchers, operators and community hosts. Bring a comparable study, a measurement we’ve missed, or a condition under which you think a proposal would fail.</p>
-      <a href="mailto:contact@globallocalai.org?subject=GLAF%20research%20agenda">Discuss the research agenda</a>
-    </section>
-  </main>
-  <footer><div class="wrap"><a href="./">Global Local AI Foundation</a> · Exploratory public-interest research</div></footer>
+  <p><a href="./#/research-agenda">Open the GLAF Research Agenda</a></p>
 </body>
 </html>
